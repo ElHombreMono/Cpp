@@ -1,7 +1,76 @@
 # include <iostream>
 using namespace std;
 
+// FUNCIONES PARA LOS EJERCICIOS 6, 7 Y 8_____________________________
 
+int numMayor(int num, int numMay){
+	if (num > numMay) numMay = num;
+	return numMay;
+}
+
+int numMenor(int num, int numMen){
+	if (num < numMen) numMen = num;
+	return numMen;
+}
+
+int pideNumeros(){
+	int numero;
+	cout << "Introduce un numero: ";
+	cin >> numero;
+	return numero;
+}
+
+int sumaNumeros(int nume, int tot){
+	tot = tot + nume;
+	return tot;
+}
+
+void clasificaNumeros(int salida){
+	int num;
+	int mayor = 0;
+	int menor = 10000;
+	int total = 0;
+	int cont = 0;
+	int media;
+	cout << "Introduce -1 para terminar" << endl;
+	num = pideNumeros();
+	do{
+		mayor = numMayor (num, mayor);
+		menor = numMenor (num, menor);
+		total = sumaNumeros(num, total);
+		cont += 1;
+		num = pideNumeros();
+	} while (num != salida);
+	media = total / cont;
+
+	cout << "MAYOR: " << mayor << endl;
+	cout << "MENOR: " << menor << endl;
+	cout << "MEDIA: " << media << endl;
+}
+
+int sumaPotencias (int num){
+	int sub = 2;
+	int total = 0;
+	int cont = 0;
+	for (int i = 0; i < num; i++){
+		sub = 2;
+		for (int j = 0; j < cont; j++){
+			sub = sub * 2;
+		}
+		total = total + sub;
+		cont += 1;
+	}
+	return total;
+}
+
+void cuentaAtras(int num){
+	cout << endl << "CUENTA ATRAS" << endl;
+	for (num; num >= 0; num -= 1){
+		cout << num << "\t";
+	}
+}
+
+//---------------------------------------------------------------------------------------------------------------------------
 
 int main() {
 
@@ -11,6 +80,14 @@ int main() {
 	int arraySuma [numeros/salto];
 	int suma;
 	int cont = 0;
+
+
+	int fin = -1;
+	int numero;
+	int resultado;
+	int descuento = 100;
+
+
 	for (int i = 0; i < numeros; i++){
 		arrayNumeros [i] = i;
 	}
@@ -24,6 +101,7 @@ int main() {
 	for (int k = 0; k < numeros/salto; k++){
 		cout << arraySuma[k] << endl;
 	}
+
 
 
 //----------------------------------------------------------------------------------------------
@@ -115,13 +193,27 @@ int main() {
 			cout << arrayPares[m] << ", ";
 		}
 
+	cout << endl;
+	cout << endl;
+	cout << endl;
+
+//-----------------------------EJERCICIO 6--------------------------------------------
+
+	clasificaNumeros(fin);
+
+//-----------------------------EJERCICIO 7--------------------------------------------
+
+	cout << endl;
+	numero = pideNumeros();
+	resultado = sumaPotencias(numero);
+	cout << endl;
+	cout << "2^1 + 2^2 + ... + 2^n = " << resultado << endl;
+
+//-----------------------------EJERCICIO 8--------------------------------------------
+
+	cuentaAtras(descuento);
 
 
 return 0;
 }
 
-/*
-EJERCICIOS:
-Rellena un vector con los 100 primeros numeros.
-Suma de 4 en 4 los numeros y guardalos en otro vector.
-*/
