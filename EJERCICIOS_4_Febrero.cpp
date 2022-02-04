@@ -90,12 +90,12 @@ int main() {
 
 	rellenaMas5(arrayMas5, tama);   		//	2.1
 	//printArray(arrayMas5, tama);
-	rellenaBin(arrayBin, tama);				//	2.2
+	rellenaBin(arrayBin, tama);			//	2.2
 	//printArray(arrayBin, tama);
 
 	//-----------------------EJERCICIO 3-------------------------------------------------------
 
-	pideNumMas5(arrayMas5, tama, minimo);	//	3.1
+	pideNumMas5(arrayMas5, tama, minimo);		//	3.1
 	printArray(arrayMas5, tama);
 	cout << endl << "OK, AHORA VAMOS A JUGAR. INTENTA ENCONTRAR LA POSICION DEL NUMERO 1" << endl << "TIENES 5 INTENTOS" << endl;
 	pideNumBin(arrayBin,tama, limite);		//	3.2
