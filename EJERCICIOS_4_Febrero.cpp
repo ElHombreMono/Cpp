@@ -105,25 +105,25 @@ int main() {
 
 	/*
 
-	Estas son las librerías necesarias para usar la función rand
+	Estas son las librerías necesarias para usar la función rand:
 
 	# include <stdlib.h> 
 	# include <time.h> 
 
-	
+	Este es un ejemplo de su uso:
 
 	srand (time(NULL));			Esto resetea la semilla (basada en tiempo) a partir de la cual se generarán números pseudoaleatorios.
-	int num = rand()%tam;		Esto devuelve un numero de entre 1 y "tam".
+	int num = rand()%tam;			Esto devuelve un numero de entre 1 y "tam".
 								Para buscar un número entre, por ejemplo, 5 y 15
-								usaremos int num = 5 + rand()%15
+								usaremos:
+								
+								int num = 5 + rand()%15
 
-	He usado la función rand porque es la que encotré hace unos días, pero parece ser que
-	Existen otras, como random, que genera números mejor distribuidos.
+	He usado la función rand porque es la que encontré hace unos días, pero parece ser que
+	existen otras, como random, que genera números mejor distribuidos.
 
 
 	*/
-
-
-
+	
 	return 0;
 }
