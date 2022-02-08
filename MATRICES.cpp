@@ -55,7 +55,6 @@ void printMatrix (int matriz[TAMA][TAMA], int nFil, int nCol){
 }
 
 int main() {
-	int const TAMA = 10;
 	int array[TAMA];
 	string matrizXO[TAMA][TAMA]; // [FILAS][COLUMNAS] --- Pero no siempre así.
 	int matrizCeros[TAMA][TAMA];
